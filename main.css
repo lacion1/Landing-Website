@@ -19,6 +19,10 @@ body {
     max-width: 1440px;
 }
 
+footer {
+    max-width: 1440px;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -83,11 +87,12 @@ body {
 .Home {
     font-weight: 700;
 }
-.two-guys {
+
+/* .two-guys {
     position: absolute;
     top:243px;
     right: 0;
-}
+} */
 
 .h1 {
     font-weight: 700;
@@ -208,32 +213,31 @@ body {
 
 .send-message-bg {
     background-color: #262626;
+    max-width: 1440px;
     min-height: 1140px;
 }
 
 .info-container {
     max-width: 1320px;
     padding-top: 168px;
-
+    margin: 0 auto;
 }
 
 .container__info {
     display: flex;
-    justify-content: space-between;
 }
 
 .info__social {
-    min-width: 570px;
-    max-height: 509px;
+    max-width: 570px;
+    height: 509px;
     background-color: #1E1D1D;
     margin-left: 60px;
 }
 
 .info__tittle {
-    min-width: 691px;
+    max-width: 691px;
     min-height: 797px;
     background-color: rgba(64, 63, 63, 0.2);
-    margin-left: 60px;
     margin-bottom: 40px;
 }
 
@@ -292,7 +296,7 @@ li {
 }
 
 .get-in-touch {
-    min-width: 570px;
+    max-width: 570px;
     min-height: 690px;
     margin: 39px 60px 59px;
 }
@@ -306,7 +310,7 @@ li {
 
 .email-input {
     margin-top: 10px;
-    min-width: 387px;
+    width: 387px;
     min-height: 44px;
     background-color: #fff;
     border-radius: 8px;
@@ -321,8 +325,8 @@ li {
 
 .message-input {
     margin-top: 11px;
-    min-width: 567px;
-    min-height: 325px;
+    width: 567px;
+    height: 325px;
     background-color: #fff;
     border-radius: 8px;
 
@@ -345,7 +349,7 @@ li {
 }
 
 .bg-info {
-    width: 510px;
+    max-width: 510px;
     height: 70px;
     background-color: rgba(42, 42, 42, 1);
     margin-left: 244px;
@@ -353,7 +357,7 @@ li {
 }
 
 .bg-footer {
-    width: 510px;
+    max-width: 510px;
     height: 45px;
     background: #262626;
     opacity: 0.1;
@@ -362,20 +366,20 @@ li {
 }
 
 .bg-under-section {
-    width: 1440px;
+    max-width: 1440px;
     height: 165px;
     background-color: rgba(33, 32, 32, 1);
 }
 
 .footer-container-bg {
-    width: 1440px;
-    height: 375px;
+    max-width: 1440px;
+    min-height: 375px;
     background-color: rgba(227, 228, 230, 1);
 }
 
 .footer__container {
-    width: 755px;
-    height: 150px;
+    max-width: 755px;
+    min-height: 150px;
     margin-left: 342px;
     display: flex;
     justify-content: space-between;
@@ -386,19 +390,19 @@ li {
 }
 
 .Overview {
-    width: 137px;
-    height: 150px;
+    max-width: 137px;
+    min-height: 150px;
 }
 
 .footer-info {
-    width: 300px;
-    height: 150px;
+    max-width: 300px;
+    min-height: 150px;
     text-align: center;
 }
 
 .Follow-us {
-    width: 180px;
-    height: 150px;
+    max-width: 180px;
+    min-height: 150px;
     text-align: center;
 }
 
@@ -407,12 +411,14 @@ li {
     line-height: 121.5%;
     color: #2A2B2E;
 }
-.footer-info__email{
+
+.footer-info__email {
     padding-top: 5px;
 }
-.footer-info__phone{
+
+.footer-info__phone {
     padding-top: 5px;
-} 
+}
 
 .for-logo {
     display: flex;
@@ -421,15 +427,83 @@ li {
     text-align: center;
 }
 
-.Overview {
+.Overview a {
     color: #2A2B2E;
-
 }
+
 .bg-footer-left {
-    width: 510px;
+    max-width: 510px;
     height: 45px;
     background: #262626;
     opacity: 0.1;
     margin-top: 76px;
 }
-/* Adaptation version for mobile devices ver 1 */
+
+@media screen and (max-width: 1280px) {
+    .menu {
+        flex-direction: column;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .App__menu {
+        flex-direction: column;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 1384px) {
+    .container__info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .footer__container {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin: auto auto;
+    }
+}
+
+@media screen and (max-width: 834px) {
+    .container__info {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: auto auto;
+    }
+
+    .get-in-touch {
+        margin: auto auto;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .info__social {
+        margin: auto auto;
+    }
+
+    .info_board {
+        margin: auto auto;
+    }
+
+    .get-in-touch {
+        margin: auto auto;
+    }
+
+    .message-input {
+        max-width: 50%;
+    }
+
+    .email-input {
+        max-width: 50%;
+    }
+
+    .header__title {
+        flex-direction: column;
+        align-items: center;
+    }}/* }first attempt to adapt the site for mobile devices */
